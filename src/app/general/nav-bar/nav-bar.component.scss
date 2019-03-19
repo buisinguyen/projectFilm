@@ -1,0 +1,60 @@
+@import "../../../scss/vars";
+
+.navbar{
+    width: 100%;
+    background-color: transparent;
+    height: 50px;
+}
+.navbar a{
+    text-decoration: none;
+    color: $color-red;
+}
+
+.left{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.left .img{
+    background-position: center;
+    width: 50px;
+    height: 50px;
+}
+.title a{
+    text-transform: uppercase;
+}
+.title img{
+    width: 100%;
+}
+
+.middle{
+    width: 50%;
+    justify-content: center;
+    font-size: $fs-3;
+    // font-weight: bold;
+
+}
+.middle>ul>li:nth-child(2){
+    margin: 0 $mg-3;
+}
+.right>a{
+    width: 160px;
+    background-color: transparent;
+}
+.right .fa{
+    margin: 0 $mg-1;
+}
+.right{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin-left: $mg-3;
+}
+
+.dropdown-menu{
+    width: 100px;
+    margin-left: 85px;
+    right: 0;
+}
+

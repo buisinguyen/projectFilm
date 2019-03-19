@@ -1,0 +1,17 @@
+@import '../../../../scss/vars';
+
+.card{
+    margin-bottom: 50px;
+}
+.card>img{
+    height: 450px;
+}
+.card .title{
+    text-align: center;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-red;
+}

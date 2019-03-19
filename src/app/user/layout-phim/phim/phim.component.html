@@ -1,0 +1,15 @@
+<a (click)="XemChiTiet()" [routerLink]="[ '/chitietphim', phim.MaPhim ]">
+
+<div class="container">
+  <div class="card" style="width: 18rem;">
+        <img src={{phim.HinhAnh}} class="card-img-top" alt="...">
+   
+
+    <div class="card-body">
+      <h5 class="card-title title">{{phim.TenPhim}}</h5>
+      <a href="#" [routerLink]="[ '/danhsachghe']" class="btn btn-primary">Đặt vé</a>
+      <!-- <a (click)="XemChiTiet()" [routerLink]="[ '/chitietphim', phim.MaPhim]" class="btn btn-primary">Xem chi tiết</a> -->
+    </div>
+  </div>
+</div>
+</a>

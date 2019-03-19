@@ -1,0 +1,109 @@
+.bg {
+  width: 100%;
+  height: 500px;
+  background-image: url(../../../assets/img/phim-alita-thien-than-chien-binh.jpg);
+  position: relative;
+}
+.blur {
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.detail {
+  width: 80%;
+  height: 400px;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  // background-color: black;
+  display: flex;
+  // align-items: center;
+}
+
+.detail__image {
+  width: 25%;
+  height: 400px;
+  // background-color: yellow;
+  position: absolute;
+}
+
+.detail__image > img {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+}
+.detail__image > img:hover{
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+
+.detail__text {
+  width: 75%;
+  //height: 400px;
+  position: absolute;
+  margin-left: 25%;
+  // background-color: blue;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  top: 50%;
+  left: 20px;
+}
+.detail__text .name {
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+}
+.detail__text .mota {
+  //   transform: translate(-50%, -50%);
+  //   -webkit-transform: translate(-50%, -50%);
+  //   -moz-transform: translate(-50%, -50%);
+  //   -ms-transform: translate(-50%, -50%);
+  //   -o-transform: translate(-50%, -50%);
+  //   top:50%;
+  //   left: 50%;
+  //   position: absolute;
+  color: white;
+}
+
+.datve button{
+  width: 120px;
+  height: 50px;
+  font-size: 25px;
+  margin: auto;
+  display: block;
+  padding-bottom: 47px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  background-color: transparent;
+  border: solid pink;
+  position: absolute;
+  top: 390px;
+  left: 425px;
+  color: white;
+}
+.datve button:hover{
+  // border: solid 1px #56baed;
+  border: none;
+  background-color: rgb(209, 1, 1);
+  color: white;
+}

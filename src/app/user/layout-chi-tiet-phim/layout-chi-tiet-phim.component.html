@@ -1,0 +1,52 @@
+<div class="bg">
+    <div class="blur"></div>
+    <div class="detail">
+        <div class="detail__image">
+            <img [src]="phim.HinhAnh">
+        </div>
+
+        <div class="detail__text">
+            <div class="name">
+                {{phim.TenPhim}}
+            </div>
+            <div class="mota">
+                Mô tả: {{phim.MoTa}}
+            </div>
+
+        </div>
+    </div>
+    <div class="datve">
+        <a [routerLink]="[ '/danhsachghe' ]">
+            <button class="btn btn-primary">Đặt vé</button>
+        </a>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img [src]="phim.HinhAnh" width="200" height="300" />
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td colspan="2" align="left">{{phim.TenPhim}}</td>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mô tả</td>
+                        <td>{{phim.MoTa}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> -->

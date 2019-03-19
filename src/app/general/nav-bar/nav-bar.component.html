@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="title left">
+    <div class="img">
+      <a [routerLink]="[ '/trangchu' ]">
+        <img src="../../../assets/img/logo1.jpg">
+      </a>
+
+
+    </div>
+    <a [routerLink]="[ '/trangchu' ]">
+      <h2>Trang chủ</h2>
+    </a>
+    <!-- <a class="navbar-brand" href="#">Hutech Cinema</a> -->
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse middle" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Lịch chiếu<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tin tức</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Liên hệ</a>
+      </li>
+      <!-- <li class="nav-item ">
+        <a class="nav-link" href="#">Đăng ký</a>
+      </li> -->
+    </ul>
+  </div>
+
+  <div class="icon">
+
+  </div>
+  <div class="dropdown right">
+
+    <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      <i class="fa fa-user-circle"></i>
+      Tài khoản
+    </a>
+
+    <div class="modal" id="exampleModal">
+      <app-login-form></app-login-form>
+    </div>
+
+    <div class="modal" id="exampleModals">
+      <app-sing-up-form></app-sing-up-form>
+    </div>
+
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Đăng nhập</a>
+      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModals">Đăng ký</a>
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+</nav>

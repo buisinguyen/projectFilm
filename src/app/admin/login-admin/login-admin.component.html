@@ -1,0 +1,36 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../../../assets/img/logo.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+
+    <form class="login-form" #formDangNhap="ngForm" (ngSubmit)="DangNhap(formDangNhap.value)">
+      <div class="form-group">
+        <input class="form-control" required type="text" #taikhoan='ngModel' placeholder="Tài Khoản" name="TaiKhoan"
+          ngModel>
+        <div *ngIf="taikhoan.errors && (taikhoan.touched || taikhoan.dirty)">
+          <div class="alert alert-danger" *ngIf="taikhoan.errors.required">Vui lòng nhập tài khoản ! </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input class="form-control" required type="password" #matkhau='ngModel' placeholder="Mật Khẩu" name="MatKhau"
+          ngModel>
+        <div *ngIf="matkhau.errors && (matkhau.touched || matkhau.dirty)">
+          <div class="alert alert-danger" *ngIf="matkhau.errors.required">Vui lòng nhập Mật Khẩu ! </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" [disabled]="formDangNhap.invalid" type="submit" class="fadeIn fourth" value="Log In">Sign in</button>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
