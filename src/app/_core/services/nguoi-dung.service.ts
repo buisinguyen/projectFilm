@@ -1,15 +1,20 @@
 import { NguoiDung } from '../models/nguoidung';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { userLogin } from '../models/userLogin';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NguoiDungService {
   dangKyNguoiDung(user: NguoiDung) {
+    console.log(user);
+    
     let urlDangKy = `http://svcy2.myclass.vn/api/QuanLyNguoiDung/ThemNguoiDung`;
-    let obServable= this.http.post(urlDangKy, user);
+    let header = new HttpHeaders();
+    header.append('Content-Type','application/json');
+    let obServable= this.http.post(urlDangKy, user,{headers:header});
     return obServable;
   }
   layDanhSachNguoiDung() {
@@ -55,4 +60,20 @@ export class NguoiDungService {
     return obServe;
   }
   constructor(private http: HttpClient) { }
+//   public DangKy(nguoiDung:NguoiDung):Observable<any>{
+
+//     let apiDangKy:string = `http://svcy2.myclass.vn/api/QuanLyNguoiDung/ThemNguoiDung`;
+//     let header = new HttpHeaders ();
+//     header.append('Content-Type','application/json;charset=UTF-8');
+//     let observable = this.http.post(apiDangKy,nguoiDung, {headers:header});
+//     return observable;
+  
+// }
+public DangNhap(userLogin:userLogin):Observable<any>{
+  let apiDangNhap:string = `http://svcy2.myclass.vn/api/QuanLyNguoiDung/DangNhap?taikhoan=${userLogin.TaiKhoan}&matkhau=${userLogin.MatKhau}`;
+  let header = new HttpHeaders ();
+  header.append('Content-Type','application/json;charset=UTF-8');
+  let observable = this.http.post(apiDangNhap,userLogin, {headers:header});
+  return observable;
+}
 }

@@ -7,9 +7,22 @@ button{
     cursor: not-allowed;
 }
 .chuaDat{
-    background-color: lightblue;
+    background-color: black;
 }
 .dangChon{
-    background-color: green;
-    color: pink;
+    background-color: rgb(75, 75, 75);
+    // color: pink;
 }
+
+.ghe{
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+

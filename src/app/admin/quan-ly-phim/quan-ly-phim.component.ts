@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PhimService } from '../../_core/services/phim.service';
 import { NgForm } from '@angular/forms';
-import {QuanLyPhimService} from '../../_core/services/quan-ly-phim.service'
+import { QuanLyPhimService } from '../../_core/services/quan-ly-phim.service'
 import * as $ from 'jquery';
 import swal from 'sweetalert2';
 import { Phim } from 'src/app/_core/models/Phim';
@@ -34,8 +34,7 @@ export class QuanLyPhimComponent implements OnInit {
     value.MaNhom = "GP05";
     value.HinhAnh = HinhAnh[0].name;
     console.log(HinhAnh[0]);
-    this.PhimSV.ThemPhim(value).subscribe(
-      (kq) => {
+    this.PhimSV.ThemPhim(value).subscribe((kq) => {
         if (typeof (kq) == "object") {
           this.PhimSV.ThemHinhAnh(HinhAnh[0], value.TenPhim).subscribe(
             (kqThemHinhAnh) => {
@@ -135,7 +134,7 @@ export class QuanLyPhimComponent implements OnInit {
       }
     })
   }
-  
+
   constructor(private PhimSV: PhimService) { }
 
   ngOnInit() {

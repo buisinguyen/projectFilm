@@ -13,13 +13,14 @@
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="usernameSignUp" class="fadeIn second" name="login" placeholder="Mời bạn nhập username" required>
-      <input type="password" id="passwordSignUp" class="fadeIn third" name="login" placeholder="Mời bạn nhập mật khẩu" required>
-      <input type="text" id="email" class="fadeIn fourth" name="login" placeholder="Mời bạn nhập Email" required>
-      <input type="text" id="sodt" class="fadeIn fifth" name="login" placeholder="Mời bạn nhập số điện thoại" required>
+    <form #frmDangKy="ngForm" class="container" (ngSubmit)="DangKy(frmDangKy.value)">
+      <input type="text" id="usernameSignUp" class="fadeIn second" name="TaiKhoan" placeholder="Mời bạn nhập username" required ngModel />
+      <input type="password" id="passwordSignUp" class="fadeIn third" name="MatKhau" placeholder="Mời bạn nhập mật khẩu" required ngModel />
+      <input type="text" id="email" class="fadeIn fourth" name="Email" placeholder="Mời bạn nhập Email" required ngModel />
+      <input type="text" id="sodt" class="fadeIn fifth" name="SoDT" placeholder="Mời bạn nhập số điện thoại" required ngModel />
 
-      <input type="submit" class="fadeIn sixth" value="Log In">
+      <!-- <input type="submit" class="fadeIn sixth" value="Log In"> -->
+      <button type="submit" class="fadeIn sixth">Đăng ký</button>
     </form>
 
     <!-- Remind Passowrd -->

@@ -1,3 +1,55 @@
-.ghe{
-    display: inline;
+// .ghe{
+//     display: inline;
+// }
+.datGhe{
+    padding-top: 50px;
+    background-color: black;
+    height: 550px;
+}
+.gheNgang{
+    width: 675px + 100px;
+    margin:auto;
+    display: flex;
+
+}
+.list{
+    width: 675px;
+}
+.left .item, .right .item{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin-top: 3px;
+    padding-top: 10px;
+}
+.left .item{
+    padding-right: 10px;
+}
+.right .item{
+    padding-left: 10px;
+}
+.top{
+    width: 675px;
+    margin: auto;
+    display: flex;
+}
+.top .item{
+    width: 45px;
+    height: 45px;
+    text-align: left;
+    padding-top: 20px;
+}
+.screen{
+    width: 765px;
+    margin: auto;
+    height: 50px;
+    margin-bottom: 50px;
+    // background-color: black;
+    border: none;
+    border-top: 5px solid yellow;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }

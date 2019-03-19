@@ -13,10 +13,11 @@
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="username" class="fadeIn second" name="login" placeholder="ID" required>
-      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" required>
-      <input type="submit" class="fadeIn fourth" value="Log In">
+    <form #frmDangNhap='ngForm' (ngSubmit)="DangNhap(frmDangNhap.value)">
+      <input type="text" id="username" class="fadeIn second" name="TaiKhoan" placeholder="Tài khoản" required ngModel>
+      <input type="password" id="password" class="fadeIn third" name="MatKhau" placeholder="Mật khẩu" required ngModel>
+      <!-- <input type="submit" class="fadeIn fourth" value="Log In"> -->
+      <button type="submit" class="btn btn-success">Đăng nhập</button>
     </form>
 
     <!-- Remind Passowrd -->

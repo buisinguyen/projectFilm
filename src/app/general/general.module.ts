@@ -9,12 +9,13 @@ import { SingUpFormComponent } from './sing-up-form/sing-up-form.component';
 import {  RouterModule } from '@angular/router';
 import { DanhSachGheComponent } from './danh-sach-ghe/danh-sach-ghe.component';
 import { GheComponent } from './danh-sach-ghe/ghe/ghe.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [NavBarComponent, HeaderComponent, FooterComponent, GheComponent, LoginFormComponent, SingUpFormComponent, DanhSachGheComponent],
   imports: [
-    CommonModule, MatMenuModule, RouterModule
+    CommonModule, MatMenuModule, RouterModule, FormsModule
   ],
   exports: [NavBarComponent, HeaderComponent, FooterComponent, GheComponent, LoginFormComponent, SingUpFormComponent, DanhSachGheComponent]
 })
