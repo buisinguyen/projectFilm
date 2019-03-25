@@ -1,0 +1,26 @@
+.row {
+  margin: 0;
+//   height: 50px;
+  width: 650px;
+  justify-content: space-between;
+//   align-items: center;
+}
+select {
+  cursor: pointer;
+}
+
+a>button{
+    height: 100%;
+}
+.mat-form-field-wrapper{
+    height: 50px;
+}
+mat-form-field{
+    border-top: none;
+}
+svg{
+    width: 20px;
+}
+.btn-group{
+    height: 50px;
+}

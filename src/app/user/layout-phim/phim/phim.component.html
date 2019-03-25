@@ -1,15 +1,16 @@
-<a (click)="XemChiTiet()" [routerLink]="[ '/chitietphim', phim.MaPhim ]">
+<a class="phim" (click)="XemChiTiet()" [routerLink]="[ '/chitietphim', phim.MaPhim ]">
 
-<div class="container">
-  <div class="card" style="width: 18rem;">
-        <img src={{phim.HinhAnh}} class="card-img-top" alt="...">
-   
-
-    <div class="card-body">
-      <h5 class="card-title title">{{phim.TenPhim}}</h5>
-      <a href="#" [routerLink]="[ '/danhsachghe']" class="btn btn-primary">Đặt vé</a>
-      <!-- <a (click)="XemChiTiet()" [routerLink]="[ '/chitietphim', phim.MaPhim]" class="btn btn-primary">Xem chi tiết</a> -->
+    <div class="card">
+      <img src={{phim.HinhAnh}} alt="...">
+      <div class="card-body">
+        <h5 class="card-title title">{{phim.TenPhim}}</h5>
+        <a href="#" [routerLink]="[ '/danhsachghe']" class="btn btn-primary btnVe">
+          <span class="front">Đặt vé</span>
+          <span class="center"></span>
+          <span class="back">ĐẶT VÉ</span>
+        </a>
+        <!-- <a (click)="XemChiTiet()" [routerLink]="[ '/chitietphim', phim.MaPhim]" class="btn btn-primary">Xem chi tiết</a> -->
+      </div>
     </div>
-  </div>
-</div>
+
 </a>

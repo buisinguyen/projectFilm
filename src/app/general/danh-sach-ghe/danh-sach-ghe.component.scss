@@ -1,10 +1,26 @@
 // .ghe{
 //     display: inline;
 // }
+.blur{
+    width: 100%;
+    height: 550px;
+    background-color: gray;
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    z-index: 1;
+    position: relative;
+
+}
 .datGhe{
     padding-top: 50px;
-    background-color: black;
+    // background-color: black;
     height: 550px;
+    // filter: blur(20px) ;
+    // -webkit-filter: blur(20px) ;
+    position: absolute;
+    top: 50px;
+    left: calc((100% - 775px)/2);
+    z-index: 2;
 }
 .gheNgang{
     width: 675px + 100px;

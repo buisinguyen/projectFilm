@@ -14,6 +14,13 @@ import { PhimSapChieuComponent } from './layout-phim/phim/phim-sap-chieu/phim-sa
 import { LayoutDatVeComponent } from './layout-dat-ve/layout-dat-ve.component';
 import { LayoutVeComponent } from './layout-dat-ve/layout-ve/layout-ve.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { LichChieuComponent } from './layout-chi-tiet-phim/lich-chieu/lich-chieu.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MaterialModule } from '../_core/shared/Module/material/material.module';
+// import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRippleModule, MatNativeDateModule } from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -23,9 +30,11 @@ import {NgxPaginationModule} from 'ngx-pagination';
 // ]
 
 @NgModule({
-  declarations: [LayoutTrangChuComponent, LayoutPhimComponent, LayoutChiTietPhimComponent, PhimComponent, PhimSapChieuComponent, LayoutDatVeComponent, LayoutVeComponent],
+  declarations: [LayoutTrangChuComponent, LayoutPhimComponent, LayoutChiTietPhimComponent, PhimComponent, PhimSapChieuComponent, LayoutDatVeComponent, LayoutVeComponent, LichChieuComponent],
   imports: [
-    CommonModule,RouterModule,  FormsModule, GeneralModule, PipeModule, NgxPaginationModule
+    
+    CommonModule,RouterModule,  FormsModule, GeneralModule, PipeModule, NgxPaginationModule, MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputModule
+    
   ],
 
 })

@@ -2,12 +2,12 @@
 
 .navbar{
     width: 100%;
-    background-color: transparent;
+    // background-color: $color-blue;
     height: 50px;
 }
 .navbar a{
     text-decoration: none;
-    color: $color-red;
+    color: #b71c1c;
 }
 
 .left{
@@ -30,7 +30,7 @@
 .middle{
     width: 50%;
     justify-content: center;
-    font-size: $fs-3;
+    font-size: 25px;
     // font-weight: bold;
 
 }

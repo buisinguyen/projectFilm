@@ -83,27 +83,38 @@
   //   position: absolute;
   color: white;
 }
-
-.datve button{
-  width: 120px;
-  height: 50px;
-  font-size: 25px;
-  margin: auto;
-  display: block;
-  padding-bottom: 47px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 25px;
-  background-color: transparent;
-  border: solid pink;
+.datve{
+  display: flex;
   position: absolute;
-  top: 390px;
+  top: 412px;
   left: 425px;
-  color: white;
+  z-index: 5;
+
 }
-.datve button:hover{
-  // border: solid 1px #56baed;
-  border: none;
-  background-color: rgb(209, 1, 1);
-  color: white;
-}
+
+// .datve .btnDatVe{
+//   width: 120px;
+//   height: 50px;
+//   font-size: 25px;
+//   margin: auto;
+//   display: block;
+//   padding-bottom: 47px;
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   border-radius: 25px;
+//   background-color: transparent;
+//   border: solid pink;
+//   position: absolute;
+//   top: 390px;
+//   left: 425px;
+//   color: white;
+// }
+// .datve button:hover{
+//   // border: solid 1px #56baed;
+//   border: none;
+//   background-color: rgb(209, 1, 1);
+//   color: white;
+// }
+
+
+

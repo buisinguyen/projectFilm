@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GheComponent } from './ghe.component';
+import { LichChieuComponent } from './lich-chieu.component';
 
-describe('GheComponent', () => {
-  let component: GheComponent;
-  let fixture: ComponentFixture<GheComponent>;
+describe('LichChieuComponent', () => {
+  let component: LichChieuComponent;
+  let fixture: ComponentFixture<LichChieuComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GheComponent ]
+      declarations: [ LichChieuComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GheComponent);
+    fixture = TestBed.createComponent(LichChieuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

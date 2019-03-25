@@ -14,15 +14,28 @@
 
     <!-- Login Form -->
     <form #frmDangNhap='ngForm' (ngSubmit)="DangNhap(frmDangNhap.value)">
-      <input type="text" id="username" class="fadeIn second" name="TaiKhoan" placeholder="Tài khoản" required ngModel>
-      <input type="password" id="password" class="fadeIn third" name="MatKhau" placeholder="Mật khẩu" required ngModel>
-      <!-- <input type="submit" class="fadeIn fourth" value="Log In"> -->
-      <button type="submit" class="btn btn-success">Đăng nhập</button>
+      <form class="login-form" #formDangNhap="ngForm" (ngSubmit)="DangNhap(formDangNhap.value)">
+        <div class="form-group">
+          <input class="form-control fadeIn second" required type="text" #taikhoan='ngModel' placeholder="Tài khoản" name="TaiKhoan"
+            ngModel>
+          <div *ngIf="taikhoan.errors && (taikhoan.touched || taikhoan.dirty)">
+            <div class="alert alert-danger" *ngIf="taikhoan.errors.required">Vui lòng nhập tài khoản ! </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control fadeIn third" required type="password" #matkhau='ngModel' placeholder="Mật khẩu" name="MatKhau"
+            ngModel>
+          <div *ngIf="matkhau.errors && (matkhau.touched || matkhau.dirty)">
+            <div class="alert alert-danger" *ngIf="matkhau.errors.required">Vui lòng nhập Mật Khẩu ! </div>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block" [disabled]="formDangNhap.invalid" type="submit" class="fadeIn fourth" value="Log In">Đăng nhập</button>
+      </form>
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
+      <a class="underlineHover" href="#">Quên mật khẩu</a>
     </div>
   </div>
 </div>

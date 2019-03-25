@@ -25,14 +25,15 @@
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
       <div class="row">
-        <div class="col-4" *ngFor="let phim of dsPhim ">
+        <div *ngFor="let phim of dsPhim | paginate: { itemsPerPage: 8, currentPage: p }">
           <app-phim [phim]='phim'></app-phim>
         </div>
       </div>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <div class="row">
-        <div class="col-4" *ngFor="let phimSC of dsPhimSC ">
+        <div *ngFor="let phimSC of dsPhimSC ">
           <app-phim-sap-chieu [phimSapChieu]='phimSC'></app-phim-sap-chieu>
         </div>
       </div>
