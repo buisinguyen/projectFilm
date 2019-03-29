@@ -2,7 +2,7 @@
 //     display: inline;
 // }
 .blur{
-    width: 100%;
+    width: 144%;
     height: 550px;
     background-color: gray;
     filter: blur(20px);
@@ -19,7 +19,7 @@
     // -webkit-filter: blur(20px) ;
     position: absolute;
     top: 50px;
-    left: calc((100% - 775px)/2);
+    left: calc((70% - 775px)/2);
     z-index: 2;
 }
 .gheNgang{

@@ -21,6 +21,10 @@ import { MaterialModule } from '../_core/shared/Module/material/material.module'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRippleModule, MatNativeDateModule } from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
+// import { QunLyDatVeComponent } from './qun-ly-dat-ve/qun-ly-dat-ve.component';
+// import { QuanLyDatVeComponent } from './quan-ly-dat-ve/quan-ly-dat-ve.component';
+import { QuanLyVeComponent } from './layout-dat-ve/quan-ly-ve/quan-ly-ve.component';
+import { ThongTinVeComponent } from './layout-dat-ve/quan-ly-ve/thong-tin-ve/thong-tin-ve.component';
 
 
 
@@ -30,7 +34,7 @@ import {MatInputModule} from '@angular/material/input';
 // ]
 
 @NgModule({
-  declarations: [LayoutTrangChuComponent, LayoutPhimComponent, LayoutChiTietPhimComponent, PhimComponent, PhimSapChieuComponent, LayoutDatVeComponent, LayoutVeComponent, LichChieuComponent],
+  declarations: [LayoutTrangChuComponent, LayoutPhimComponent, LayoutChiTietPhimComponent, PhimComponent, PhimSapChieuComponent, LayoutDatVeComponent, LayoutVeComponent, LichChieuComponent, QuanLyVeComponent, ThongTinVeComponent],
   imports: [
     
     CommonModule,RouterModule,  FormsModule, GeneralModule, PipeModule, NgxPaginationModule, MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputModule

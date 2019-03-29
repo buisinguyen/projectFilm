@@ -40,8 +40,8 @@
   </div>
   <div class="dropdown right">
 
-    <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="false">
+    <a *ngIf="!isLogin; else templateLogin" class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <i class="fa fa-user-circle"></i>
       Tài khoản
     </a>
@@ -55,11 +55,15 @@
     </div>
 
 
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Đăng nhập</a>
-      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModals">Đăng ký</a>
+    <form class="dropdown-menu" aria-labelledby="dropdownMenuLink" #frmDangNhap='ngForm' (ngSubmit)="DangNhap(frmDangNhap.value)">
+      <!-- <a type="Submit" class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" >Đăng nhập</a>
+      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModals">Đăng ký</a> -->
 
-    </div>
+      <input type="Submit" class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" value="Đăng nhập">
+      <input class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModals" value="Đăng ký">
+
+
+    </form>
 
 
 
@@ -69,3 +73,20 @@
 
 
 </nav>
+
+
+<ng-template #templateLogin>
+  <!-- <button class="btn btn-success">Hello motherfucker {{user}} </button> <br>
+  <button class="btn btn-warning" (click)="DangXuat()">Đăng xuất</button> -->
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Xin chào...
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" >Chỉnh sửa tài khoản</a>
+      <a class="dropdown-item" (click)="DangXuat()">Đăng xuất</a>
+    </div>
+  </div>
+
+</ng-template>

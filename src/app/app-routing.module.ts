@@ -12,6 +12,7 @@ import { LayoutChiTietPhimComponent } from './user/layout-chi-tiet-phim/layout-c
 import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
 import { LoginGuardService } from './_core/services/login-guard.service';
 import { DanhSachGheComponent } from './general/danh-sach-ghe/danh-sach-ghe.component';
+import { LayoutDatVeComponent } from './user/layout-dat-ve/layout-dat-ve.component';
 
 const routes: Routes = [
 
@@ -32,7 +33,7 @@ const routes: Routes = [
       {path: 'trangchu', component:LayoutPhimComponent},
       {path: '', component: LayoutPhimComponent},
       {path: 'chitietphim', component: LayoutChiTietPhimComponent},
-      {path: 'danhsachghe',component:DanhSachGheComponent}
+      {path: 'danhsachghe',component:LayoutDatVeComponent}
     ]
   }
 ];

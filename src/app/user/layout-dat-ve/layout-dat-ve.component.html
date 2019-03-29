@@ -1,5 +1,15 @@
-<div class="container">
+<!-- <div class="container">
   <ng-container *ngFor="let ghe of mangGhe">
     <app-layout-ve [ghe]="ghe"></app-layout-ve>
   </ng-container>
+</div> -->
+
+<div class="row Ve">
+  <div class="left">
+    <app-danh-sach-ghe (pushOutDS)="HienThi($event)" #dsghe></app-danh-sach-ghe>
+
+  </div>
+  <div class="right">
+    <app-thong-tin-ve [DSGhe]="list" (Huy)="HuyGhe($event)"></app-thong-tin-ve>
+  </div>
 </div>

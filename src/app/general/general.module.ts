@@ -10,10 +10,11 @@ import {  RouterModule } from '@angular/router';
 import { DanhSachGheComponent } from './danh-sach-ghe/danh-sach-ghe.component';
 import { GheComponent } from './danh-sach-ghe/ghe/ghe.component';
 import { FormsModule } from '@angular/forms';
+import { QuanLyGheComponent } from './danh-sach-ghe/quan-ly-ghe/quan-ly-ghe.component';
 
 
 @NgModule({
-  declarations: [NavBarComponent, HeaderComponent, FooterComponent, GheComponent, LoginFormComponent, SingUpFormComponent, DanhSachGheComponent],
+  declarations: [NavBarComponent, HeaderComponent, FooterComponent, GheComponent, LoginFormComponent, SingUpFormComponent, DanhSachGheComponent, QuanLyGheComponent],
   imports: [
     CommonModule, MatMenuModule, RouterModule, FormsModule
   ],

@@ -1,11 +1,28 @@
-<div class="container">
-    <div class="card" style="width: 18rem;">
-      <img src={{phimSapChieu.HinhAnh}} class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title title">{{phimSapChieu.TenPhim}}</h5>
-        <p class="card-text mota">{{phimSapChieu.MoTa | shortcut:100 }}</p>
-        <!-- <a href="#" class="btn btn-primary">Đặt vé</a> -->
-        <a href="#" class="btn btn-primary">Xem chi tiết</a>
-      </div>
+<!-- <div class="container">
+  <div class="card" style="width: 18rem;">
+    <img src={{phimSapChieu.HinhAnh}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title title">{{phimSapChieu.TenPhim}}</h5>
+      <p class="card-text mota">{{phimSapChieu.MoTa | shortcut:100 }}</p>
+      <a href="#" class="btn btn-primary">Đặt vé</a>
+      <a href="#" class="btn btn-primary">Xem chi tiết</a>
     </div>
   </div>
+</div> -->
+
+<a class="phim" (click)="XemChiTiet()" [routerLink]="[ '/chitietphim', phimSapChieu.MaPhim ]">
+
+  <div class="card">
+    <img src={{phimSapChieu.HinhAnh}} alt="...">
+    <div class="card-body">
+      <h5 class="card-title title">{{phimSapChieu.TenPhim}}</h5>
+      <a href="#" [routerLink]="[ '/danhsachghe']" class="btn btn-primary btnVe">
+        <span class="front">Đặt vé</span>
+        <span class="center"></span>
+        <span class="back">ĐẶT VÉ</span>
+      </a>
+      <!-- <a (click)="XemChiTiet()" [routerLink]="[ '/chitietphim', phim.MaPhim]" class="btn btn-primary">Xem chi tiết</a> -->
+    </div>
+  </div>
+
+</a>

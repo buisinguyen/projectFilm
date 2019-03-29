@@ -12,6 +12,7 @@ import { NguoiDung } from 'src/app/_core/models/nguoidung';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
+
   subService: Subscription;
   @ViewChild("frmDangNhap") formDN: NgForm;
 
@@ -22,20 +23,23 @@ export class LoginFormComponent implements OnInit {
   DangNhap(userlogin: any) {
     console.log(userlogin);
     this.subService = this.nguoiDungService.DangNhap(userlogin).subscribe((result) => {
-      console.log(result);
+      // console.log(result);
 
       if (typeof result == 'object') {
         localStorage.setItem('userLogin', JSON.stringify(userLogin));
-        swal('Thông báo', 'Đăng nhập thành công !', 'success');
+        document.getElementById("close").click();
+        location.reload();
+        // document.getElementsByClassName("close").click();
+
       } else {
         swal('Thông báo', result, 'error');
 
       }
 
     })
-    // console.log(userLogin);
-
   }
+  
+
   ngOnDestroy(): void {
     if (this.subService) {
       this.subService.unsubscribe();

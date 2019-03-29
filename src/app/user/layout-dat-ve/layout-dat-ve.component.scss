@@ -1,4 +1,14 @@
-.container{
+
+.Ve{
     width: 100%;
-    height: 500px;
+    // height: 500px;
+}
+.left{
+    width: 70%;
+}
+.right{
+    width: 30%;
+    padding-top: 155px;
+    padding-left: 50px;
+    z-index: 4;
 }

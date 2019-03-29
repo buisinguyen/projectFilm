@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { QuanLyPhimService } from 'src/app/_core/services/quan-ly-phim.service';
+import { Ve } from 'src/app/_core/models/Ve';
+import { HuyGheService } from 'src/app/general/danh-sach-ghe/huy-ghe.service';
 @Component({
   selector: 'app-layout-dat-ve',
   templateUrl: './layout-dat-ve.component.html',
@@ -9,11 +11,14 @@ import { QuanLyPhimService } from 'src/app/_core/services/quan-ly-phim.service';
 })
 export class LayoutDatVeComponent implements OnInit {
 
+  public bien:any;
+  list:Array<Ve> = [];
+
   private subParam: Subscription;
   private subService: Subscription;
   private mangGhe: any[] = [];
   MaLichChieu: number = 0;
-  constructor(private activatedRoute: ActivatedRoute, private qlPhimService: QuanLyPhimService) { }
+  constructor(private activatedRoute: ActivatedRoute, private qlPhimService: QuanLyPhimService, private huygheservice:HuyGheService) { }
 
   ngOnInit() {
     this.subParam = this.activatedRoute.params.subscribe(params => {
@@ -37,6 +42,27 @@ export class LayoutDatVeComponent implements OnInit {
       this.subService.unsubscribe();
     }
   }
-
+  HienThi(res: Ve) {
+    let check = true;
+    this.list.forEach(element => {
+      if (res.soghe == element.soghe) {
+        this.xoaMotItem(res.soghe);
+        console.log(this.list);
+        check = false;
+      }
+    });
+    (check) ? this.list.push(res) : "";
+    // console.log(this.list);
+  }
+  xoaMotItem(soghe) {
+    this.list = this.list.filter(i => i.soghe != soghe); // Vòng while
+    console.log(soghe);
+  }
+  HuyGhe(soghe) {
+    console.log(soghe);
+    //todo
+    this.huygheservice.setBeha(soghe);
+    this.xoaMotItem(soghe);
+  }
 
 }
