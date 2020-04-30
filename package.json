@@ -26,7 +26,7 @@
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "core-js": "^2.5.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "ng2-charts": "^1.6.0",
     "ng2-pagination": "^2.0.2",
     "ng2-pagination-module": "^1.0.3",
